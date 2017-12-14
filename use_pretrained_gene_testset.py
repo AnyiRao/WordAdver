@@ -66,6 +66,36 @@ def Tag(fir_din1_index,fir_din2_index,m,sent_n):
     tag2=tag_set2[(fir_din1_index[m]-4)[0]][1]
     return tag1,tag2,tag_set1,tag_set2
 
+def load_turker(): # load examples after Mechanical Turkers annotating.
+    filename="examples_turker.txt"
+    lines = []
+    x = []
+    with open(filename, 'r') as f:
+        lines.extend(f.readlines())
+    for i, line in enumerate(lines):
+        x.append(line.rstrip())
+
+    adver_x= np.zeros((len(x)/2,61))
+    adver_y=np.array([100])
+    for i in xrange(len(x)):
+        if i%2 == 1: # 0 means removing original keep adver
+            continue
+        X=x[i].split( )
+        if X[-1]== 'pos':
+            adver_y=np.row_stack([adver_y,np.array([1])])
+        else:
+            adver_y=np.row_stack([adver_y,np.array([0])])
+
+        for j,p in zip(X, xrange(len(X))):
+            #            print j,p
+            if j =="pos" or j=="neg":
+                continue
+            #            print word_idx_map[j]
+            adver_x[i/2,p+4]=(word_idx_map[j])
+adver_y=adver_y[1:]
+    adver_y=adver_y.reshape([len(x)/2,])
+    return adver_x,adver_y
+
 def loaddata():
     I=np.loadtxt('save/'+SAVETHEME+'I.txt').astype('int32')
     M=np.loadtxt('save/'+SAVETHEME+'M.txt').astype('int32')

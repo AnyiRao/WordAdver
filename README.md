@@ -2,7 +2,7 @@
 
 This repository includes robustness improvements using adversarial training improvement. 
 
-Some examples generated from CNN are able to trick the classifier. please have a look at  ``examples.txt``. with the first column as its label, the second as its confidence, the third as the sentence.
+Some examples generated from CNN are able to trick both CNN and BLSTM. please have a look at  ``examples.txt``, with the first column as its label, the second as its confidence, the third as the sentence. ``examples_turker.txt`` are examples given to [Amazon Mechanical Turk](https://www.mturk.com/mturk/welcome) and they annoted the adversarial and original examples share the same meanings.
 ### Requirements
 Code is written in Python (2.7) and requires Theano (0.9), NLTK.
 
@@ -15,10 +15,12 @@ To process the raw data, please refer to [https://github.com/AnyiRao/SentDataPre
 
 set ``word2vec`` path points to the word2vec binary file (i.e. `GoogleNews-vectors-negative300.bin` file). 
 
-### Version of Codes
+### Different Versions of Codes
 ``add_one_word.py`` Only one word flip 
 
 ``add_two_word.py`` Allow two word flip 
+
+``add_one_word_sub.py`` Only one word flip using gradient subtraction.
 
 ``change_labels.py`` Only one word flip with labels change
 
