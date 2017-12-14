@@ -13,12 +13,7 @@ https://code.google.com/p/word2vec/
 ### Data Preprocessing
 To process the raw data, please refer to [https://github.com/AnyiRao/SentDataPre](https://github.com/AnyiRao/SentDataPre)
 
-where path points to the word2vec binary file (i.e. `GoogleNews-vectors-negative300.bin` file). 
-This will create a pickle object called `mr.p` in the same folder, which contains the dataset
-in the right format.
-
-Note: This will create the dataset with different fold-assignments than was used in the paper.
-You should still be getting a CV score of >81% with CNN-nonstatic model, though.
+set ``word2vec`` path points to the word2vec binary file (i.e. `GoogleNews-vectors-negative300.bin` file). 
 
 ### Version of Codes
 ``add_one_word.py`` Only one word flip 
