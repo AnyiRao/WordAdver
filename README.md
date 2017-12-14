@@ -2,6 +2,7 @@
 
 This repository includes robustness improvements using adversarial training improvement. 
 
+Some examples generated from CNN are able to trick the classifier. please have a look at  ``examples.txt``. with the first column as its label, the second as its confidence, the third as the sentence.
 ### Requirements
 Code is written in Python (2.7) and requires Theano (0.9), NLTK.
 
@@ -29,6 +30,14 @@ You should still be getting a CV score of >81% with CNN-nonstatic model, though.
 ``use_pretrained_gene_testset.py`` Use pretrained model to generate adversarial test set and test accuracy (with confidence) on it. 
 
 ``conv_net_sentence.pu`` As same as Kim's CNN
+
+* **lstm**
+The adversarial examples generated from CNN are able to attack a BLSTM.
+
+	``sst2_lstm.py`` Train a BLSTM model
+
+	``use_pretrained_model.py`` Use adversarial examples from CNN (e.g. ``sst2_0.4_two_examples.txt``) to attack pretrained BLSTM model.
+ 
 ### Running the models (CPU)
 Example commands:
 
