@@ -26,7 +26,7 @@ set ``word2vec`` path points to the word2vec binary file (i.e. `GoogleNews-vecto
 
 ``use_pretrained_gene_testset.py`` Use pretrained model to generate adversarial test set and test accuracy (with confidence) on it. 
 
-``conv_net_sentence.pu`` As same as Kim's CNN
+``conv_net_sentence.py`` As same as Kim's CNN
 
 * **lstm**
 The adversarial examples generated from CNN are able to attack a BLSTM.
