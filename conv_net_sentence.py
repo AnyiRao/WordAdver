@@ -247,9 +247,12 @@ if __name__=="__main__":
     test_set_x = datasets[1][:,:img_h] 
     test_set_y = np.asarray(datasets[1][:,-1],"int32")
     train_set = new_data[:n_train_batches*batch_size,:]
-    adver_set =load_adver_data()
-    train_set = np.row_stack((train_set,adver_set))
-    train_set = np.random.permutation(train_set)
+    """
+    #Add your own off-line adversarial data set using your own function load_adver_data and the following codes
+    #adver_set = load_adver_data()
+    #train_set = np.row_stack((train_set,adver_set))
+    #train_set = np.random.permutation(train_set)
+    """
     
     val_set = new_data[n_train_batches*batch_size:,:]     
     train_set_x, train_set_y = shared_dataset((train_set[:,:img_h],train_set[:,-1]))
