@@ -1,5 +1,17 @@
 ## Word-level Adversarial Examples in Convolutional Neural Networks for Sentence Classification
 
+### Citation
+
+If you use this repo in your researh, please cite:
+
+	@inproceedings{ebrahimi2018hotflip,
+	  title={HotFlip: White-Box Adversarial Examples for Text Classification},
+	  author={Ebrahimi, Javid and Rao, Anyi and Lowd, Daniel and Dou, Dejing},
+	  booktitle={Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
+	  pages={31--36},
+	  year={2018}
+	}
+
 This repository includes robustness improvements using adversarial training improvement. 
 
 Some examples generated from CNN are able to trick both CNN and BLSTM. please have a look at  ``examples.txt``, with the first column as its label, the second as its confidence, the third as the sentence. ``examples_turker.txt`` are examples given to [Amazon Mechanical Turk](https://www.mturk.com/mturk/welcome) and they annoted the adversarial and original examples share the same meanings.
