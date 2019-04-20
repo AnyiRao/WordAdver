@@ -1,16 +1,10 @@
 ## Word-level Adversarial Examples in Convolutional Neural Networks for Sentence Classification
 
-### Citation
+This repository holds the **Word-level Adversarial Examples** codes and models for the papers 
+**HotFlip: White-Box Adversarial Examples for Text Classification**
 
-If you use this repo in your researh, please cite:
-
-	@inproceedings{ebrahimi2018hotflip,
-	  title={HotFlip: White-Box Adversarial Examples for Text Classification},
-	  author={Ebrahimi, Javid and Rao, Anyi and Lowd, Daniel and Dou, Dejing},
-	  booktitle={Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
-	  pages={31--36},
-	  year={2018}
-	}
+[[Arxiv Preprint](https://arxiv.org/abs/1712.06751)]
+[[ACL 2018](https://www.aclweb.org/anthology/P18-2006)]
 
 This repository includes robustness improvements using adversarial training improvement. 
 
@@ -65,3 +59,15 @@ For example:
 ```
 THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python conv_net_sentence.py -nonstatic -word2vec
 ```
+
+### Citation
+
+If you use this repository in your researh, please cite:
+
+	@inproceedings{ebrahimi2018hotflip,
+	  title={HotFlip: White-Box Adversarial Examples for Text Classification},
+	  author={Ebrahimi, Javid and Rao, Anyi and Lowd, Daniel and Dou, Dejing},
+	  booktitle={Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
+	  pages={31--36},
+	  year={2018}
+	}
